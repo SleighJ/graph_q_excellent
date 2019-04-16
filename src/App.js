@@ -7,7 +7,7 @@ class App extends Component {
        super(props);
     }
   render() {
-        console.log('sup dude!')
+        console.log('sup dude!');
     return (
       <div className="App">
         <header className="App-header">
