@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import ApolloClient from 'apollo-boost';
+
 import './App.css';
+
+const client = new ApolloClient({
+    uri: 'graphQL endpoint'
+});
 
 class App extends Component {
     constructor(props){
