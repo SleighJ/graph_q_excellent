@@ -18,12 +18,20 @@ const authors = [{
 	name: 'George RR Martin',
 	age: 70,
 	books: ['GOT - Ill Kill You If You Die Before You Finish This', 'GOT - Maybe If You Didnt Put An Awkward Sex Scene In Every Scene...']
+}, {
+	name: 'Stephen Queen',
+	age: 60,
+	books: ['I dont know', 'What hes written']
 }];
 
 const RESOLVERS = {
 	Query: {
-		author: () => {
+		authors: () => {
 			return authors
+		},
+		author: (root, args) => {
+			const age = args.age;
+			return authors.find(author => author.age === age);
 		}
 	}
 };
