@@ -21,7 +21,7 @@ const authors = [{
 }, {
 	name: 'Stephen Queen',
 	age: 60,
-	books: ['I dont know', 'What hes written']
+	books: ['I dont know', 'What hes written, shucks']
 }];
 
 const RESOLVERS = {
