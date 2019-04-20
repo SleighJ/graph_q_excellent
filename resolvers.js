@@ -40,8 +40,12 @@ const RESOLVERS = {
 		},
 		deleteAuthor: (root, { id }) => {
 			return authorModel.findOneAndRemove({ id: id });
+		},
+		updateAuthor:(root, { id, name }) => {
+			return authorModel.findOneAndUpdate({ id: id }, { name: name })
 		}
 	}
+
 };
 
 
