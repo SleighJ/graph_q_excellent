@@ -22,7 +22,7 @@ import authorModel from './models/author';
 const RESOLVERS = {
 	Query: {
 		authors: () => {
-			return authors
+			return authorModel.find();
 		},
 		authorAge: (root, args) => {
 			const age = args.age;
