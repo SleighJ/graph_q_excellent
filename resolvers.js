@@ -22,21 +22,24 @@ import authorModel from './models/author';
 const RESOLVERS = {
 	Query: {
 		authors: () => {
-			// return authors
+			return authors
 		},
 		authorAge: (root, args) => {
 			const age = args.age;
-			// return authors.find(author => author.age === age);
+			return authors.find(author => author.age === age);
 		},
 		authorId: (root, args) => {
 			const id = args.id;
-			// return authors.find(author => author.id === id);
+			return authors.find(author => author.id === id);
 		}
 	},
 	Mutation: {
 		addAuthor: (root, { name, age, books }) => {
-			const author = new authorModel({ age: age, name: name, books: books })
+			const author = new authorModel({ age: age, name: name, books: books });
 			return author.save();
+		},
+		deleteAuthor: (root, { id }) => {
+			return authorModel.remove({ id: id });
 		}
 	}
 };
