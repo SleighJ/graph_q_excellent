@@ -17,10 +17,22 @@ const FEED_QUERY = gql`
   }
 `
 
+const author = gql`
+{
+	authors {
+     name
+     age
+     books
+  }
+}
+`;
+
 class LinkList extends Component {
 	render() {
 		return (
-			<Query query={FEED_QUERY}>
+			<div>
+				<button>YOLO</button>
+			<Query query={author}>
 				{({ loading, error, data }) => {
 					if (loading) return <div>Fetching</div>
 					if (error) return <div>Error</div>
@@ -34,6 +46,7 @@ class LinkList extends Component {
 					)
 				}}
 			</Query>
+			</div>
 		)
 	}
 }

@@ -4,20 +4,19 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import ApolloClient from "apollo-boost";
-import { HttpLink } from 'apollo-link-http';
 
-import { ApolloProvider, withApollo } from 'react-apollo';
+import { ApolloProvider } from 'react-apollo';
 
-// const networkInterface = createNetworkInterface({
-// 	uri: "http://localhost/graphqlTutorial"
-// });
-//
-// const client = new ApolloClient({networkInterface});
+//gets blocked by cors
+// uri: "http://localhost:3001/graphqlTutorial",
 
-// const AppWithClient = withApollo(App);
+//refuses connection (possibly because of cors)
+// uri: "http://localhost/graphqlTutorial",
+//https://stackoverflow.com/questions/45115309/error-options-neterr-connection-refused
 
 const apolloClient = new ApolloClient({
-	uri: "http://localhost/graphqlTutorial",
+	// uri: "http://localhost:3001/graphqlTutorial",
+		uri: "http://localhost/graphqlTutorial"
 });
 
 ReactDOM.render(
