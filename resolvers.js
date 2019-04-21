@@ -1,22 +1,3 @@
-// const authors = [{
-// 	id: 1,
-// 	name: 'JK Rowling',
-// 	age: 50,
-// 	books: ['Harry McPooter and The Skunk Warrior', 'Harry McPooter and the Shiny Ball of Death']
-// },{
-// 	id: 2,
-// 	name: 'George RR Martin',
-// 	age: 70,
-// 	books: ['GOT - Ill Kill You If You Die Before You Finish This', 'GOT - Maybe If You Didnt Put An Awkward Sex Scene In Every Awkward Sex Scene...']
-// }, {
-// 	id: 3,
-// 	name: 'Stephen Queen',
-// 	age: 60,
-// 	books: ['I dont know', 'What hes written, shucks']
-// }];
-
-import mongoose from  'mongoose';
-
 import authorModel from './models/author';
 
 const RESOLVERS = {
