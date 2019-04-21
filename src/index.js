@@ -16,14 +16,15 @@ import { ApolloProvider } from 'react-apollo';
 
 const apolloClient = new ApolloClient({
 	// uri: "http://localhost:3001/graphqlTutorial",
-		uri: "http://localhost/graphqlTutorial"
+	// 	uri: "http://localhost/graphqlTutorial",
+	uri: "http://localhost:3001/graphql",
 });
 
 ReactDOM.render(
 	<ApolloProvider client={apolloClient}>
 		<App />
 	</ApolloProvider>,
-	document.getElementById('root')
+document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change
